@@ -45,5 +45,6 @@ RabbitMQManager  RabbitMQ管理,包括消费配置,MassTransit消息总线配置
 5、拷贝 C:\Windows\.erlang.cookie 到 当前用户文件夹下 如:C:\Users\Administrator
 6、用您的rabbitmq的用户名、密码 填充 config/RabbitMQ.config 用户名、密码,并设置rabbitmq IP地址
 
-参考:http://www.cnblogs.com/yangecnu/p/Introduce-RabbitMQ.html
+参考:
+     http://www.cnblogs.com/yangecnu/p/Introduce-RabbitMQ.html
      http://www.blogjava.net/qbna350816/archive/2016/08/02/431415.aspx

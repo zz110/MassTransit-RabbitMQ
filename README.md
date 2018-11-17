@@ -1,4 +1,4 @@
-# MassTransit-RabbitMQ  .NET,MassTransit消息总线集成RabbitMQ实现发布订阅
+# MassTransit-RabbitMQ  .NET使用MassTransit消息总线集成RabbitMQ实现发布订阅
 
 1. RabbitMQClient  
       > 客户端,消费服务端 PrintMessage,RoadGateMessage消息
@@ -19,12 +19,18 @@
 	  
 2. 配置环境变量
    - ERLANG_HOME        
-        > erlang安装路径 如:D:\erl9.1
+        + erlang安装路径 如:D:\erl9.1
    - RABBITMQ_BASE      
-        > 如:D:\data\RabbitMQ  此基础目录包含了RabbitMQ server的数据库，日志文件的子目录.另外，也可以独立设置RABBITMQ_MNESIA_BASE 和 RABBITMQ_LOG_BASE 目录 RABBITMQ_BASE 配置说明 参考:http://www.blogjava.net/qbna350816/archive/2016/08/02/431415.aspx
+      + 如:D:\data\RabbitMQ 此基础目录包含了RabbitMQ server的数据库,日志文件的子目录。另外,也可以独立设置RABBITMQ_MNESIA_BASE 和 RABBITMQ_LOG_BASE 目录 RABBITMQ_BASE 
+      + 参考:http://www.blogjava.net/qbna350816/archive/2016/08/02/431415.aspx
    - RABBITMQ_SERVER    
-        > rabbiqmq 解压或安装目录 如:D:\Program Files\RabbitMQ\rabbitmq_server-3.6.13,修改PATH环境变量添加如下值 ;%ERLANG_HOME%\bin       
-         ;%RABBITMQ_SERVER%\sbin 如果以上配置不起作用改 D:\erl9.1\bin,D:\Program Files\RabbitMQ\rabbitmq_server-3.6.13\sbin
+        + rabbiqmq 解压或安装目录 如:D:\Program Files\RabbitMQ\rabbitmq_server-3.6.13
+        + 修改PATH环境变量添加如下值
+           > ;%ERLANG_HOME%\bin                   
+           > ;%RABBITMQ_SERVER%\sbin
+        + 如果以上配置不起作用改 
+          > D:\erl9.1\bin
+          > D:\Program Files\RabbitMQ\rabbitmq_server-3.6.13\sbin
 3. 启用rabbitmq服务 
    - rabbitmq-service install
    - rabbitmq-service enable

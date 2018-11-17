@@ -10,14 +10,14 @@ RabbitMQMessageDefinition  消息定义
 RabbitMQManager  RabbitMQ管理,包括消费配置,MassTransit消息总线配置,UnityContainer,日志管理
 
 
-#windows下安装RabbitMQ
+# windows下安装RabbitMQ
 
 1、准备安装资源文件
    erlang
           otp_win64_20.1.exe 下载地址:http://www.erlang.org/downloads/20.1
    rabbitmq
           rabbitmq-server-windows-3.6.13.zip 下载地址:https://github.com/rabbitmq/rabbitmq-server/releases/tag/rabbitmq_v3_6_13
-
+	  
 2、配置环境变量
    ERLANG_HOME        erlang安装路径 如:D:\erl9.1
    RABBITMQ_BASE      如:D:\data\RabbitMQ  此基础目录包含了RabbitMQ server的数据库，日志文件的子目录. 

@@ -13,9 +13,11 @@
 
 1. 准备安装资源文件
     - erlang
-        > otp_win64_20.1.exe 下载地址:http://www.erlang.org/downloads/20.1
+        + otp_win64_20.1.exe
+        + 下载地址:http://www.erlang.org/downloads/20.1
     - rabbitmq
-        > rabbitmq-server-windows-3.6.13.zip 下载地址:https://github.com/rabbitmq/rabbitmq-server/releases/tag/rabbitmq_v3_6_13
+        + rabbitmq-server-windows-3.6.13.zip
+        + 下载地址:https://github.com/rabbitmq/rabbitmq-server/releases/tag/rabbitmq_v3_6_13
 	  
 2. 配置环境变量
    - ERLANG_HOME        

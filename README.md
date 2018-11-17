@@ -41,7 +41,7 @@
    - rabbitmqctl  set_user_tags {您的rabbitmq用户名} administrator
    - rabbitmqctl  delete_user guest
    - rabbitmq-plugins enable rabbitmq_management
-5. 拷贝 C:\Windows\.erlang.cookie 到 当前用户文件夹下 如:C:\Users\Administrator
+5. 拷贝 C:\Windows\\.erlang.cookie 到 当前用户文件夹下 如:C:\Users\Administrator
 6. 用您的rabbitmq的用户名、密码 填充 config/RabbitMQ.config 用户名、密码,并设置rabbitmq IP地址
 
 7. 参考:

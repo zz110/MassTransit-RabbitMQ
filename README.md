@@ -31,7 +31,8 @@
            > ;%ERLANG_HOME%\bin                   
            > ;%RABBITMQ_SERVER%\sbin
         + 如果以上配置不起作用改 
-          > D:\erl9.1\bin
+          > D:\erl9.1\bin 
+	  
           > D:\Program Files\RabbitMQ\rabbitmq_server-3.6.13\sbin
 3. 启用rabbitmq服务 
    - rabbitmq-service install

@@ -1,6 +1,4 @@
 .vs
-../bin/**
-../obj/**
 /packages/**
 *.dll
 *.nupkg
@@ -12,3 +10,10 @@
 *.xsd
 *.pri
 *.cache
+/RabbitMQServer/obj/**
+/RabbitMQServer/bin/**
+/RabbitMQMessageDefinition/obj/**
+/RabbitMQManager/obj/**
+/RabbitMQManager/bin/**
+/RabbitMQClient/obj/**
+/RabbitMQClient/bin/**

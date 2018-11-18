@@ -11,7 +11,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RabbitMQMessageDefinition",
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RabbitMQManager", "RabbitMQManager\RabbitMQManager.csproj", "{08DDF105-1E5D-4589-8187-225ABBD2E883}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{13CEAF15-65DF-4D6C-9EEF-642D8079570C}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "README", "README", "{13CEAF15-65DF-4D6C-9EEF-642D8079570C}"
 	ProjectSection(SolutionItems) = preProject
 		README.md = README.md
 	EndProjectSection

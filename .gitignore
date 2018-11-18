@@ -1,1 +1,13 @@
 .vs
+bin
+obj
+*.dll
+*.nupkg
+*.XML
+*.pdb
+*.p7s
+*.srcsrv
+*.ps1
+*.xsd
+*.pri
+*.cache

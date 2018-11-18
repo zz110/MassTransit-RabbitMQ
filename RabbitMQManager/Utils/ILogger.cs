@@ -2,6 +2,9 @@
 
 namespace RabbitMQManager.Log
 {
+    /// <summary>
+    /// 日志接口
+    /// </summary>
     public interface ILogger
     {
         bool Log(Type classname, string methodName, string title, string message, string userId);

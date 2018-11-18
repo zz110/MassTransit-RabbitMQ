@@ -1,5 +1,0 @@
-C:\Users\azure-sky\Desktop\repo\MassTransit-RabbitMQ\RabbitMQMessageDefinition\bin\Debug\RabbitMQMessageDefinition.dll
-C:\Users\azure-sky\Desktop\repo\MassTransit-RabbitMQ\RabbitMQMessageDefinition\bin\Debug\RabbitMQMessageDefinition.pdb
-C:\Users\azure-sky\Desktop\repo\MassTransit-RabbitMQ\RabbitMQMessageDefinition\obj\Debug\RabbitMQMessageDefinition.csproj.CoreCompileInputs.cache
-C:\Users\azure-sky\Desktop\repo\MassTransit-RabbitMQ\RabbitMQMessageDefinition\obj\Debug\RabbitMQMessageDefinition.dll
-C:\Users\azure-sky\Desktop\repo\MassTransit-RabbitMQ\RabbitMQMessageDefinition\obj\Debug\RabbitMQMessageDefinition.pdb

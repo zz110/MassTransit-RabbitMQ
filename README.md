@@ -19,7 +19,7 @@
     
 2. RabbitMQ.config RabbitMQ 连接参数配置
    > Host rabbitmq连接IP地址  
-   > Username rabbitmq连接用户名 
+   > Username rabbitmq连接用户名  
    > Password rabbitmq连接密码
 
 

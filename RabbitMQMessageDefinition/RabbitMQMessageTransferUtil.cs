@@ -6,8 +6,14 @@ using System.Threading.Tasks;
 
 namespace RabbitMQMessageDefinition
 {
+    /// <summary>
+    /// 消息传输工具类
+    /// </summary>
     public class RabbitMQMessageTransferUtil
     {
+        /// <summary>
+        /// 事件定义
+        /// </summary>
         public event TransferMessageDelegate TransferMessageHandler;
 
         /// <summary>

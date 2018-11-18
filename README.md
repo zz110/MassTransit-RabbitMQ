@@ -9,6 +9,19 @@
 4. RabbitMQManager  
       > RabbitMQ管理,包括消费配置,MassTransit消息总线配置,UnityContainer,日志管理
 
+# 相关配置文件说明
+
+1. Consumer.config 消费者配置
+    > name         必须参数且唯一    
+    > queue_name   队列名称 发布订阅模式下客户端不需要配置,服务端需要配置    
+    > classname    消费者类全名称
+    
+2. RabbitMQ.config RabbitMQ 连接参数配置
+   > Host rabbitmq连接IP地址  
+   > Username rabbitmq连接用户名 
+   > Password rabbitmq连接密码
+
+
 # windows下安装RabbitMQ
 
 1. 准备安装资源文件
@@ -31,9 +44,8 @@
            > ;%ERLANG_HOME%\bin                   
            > ;%RABBITMQ_SERVER%\sbin
         + 如果以上配置不起作用改 
-          > D:\erl9.1\bin 
-	  
-          > D:\Program Files\RabbitMQ\rabbitmq_server-3.6.13\sbin
+           > D:\erl9.1\bin 	  
+           > D:\Program Files\RabbitMQ\rabbitmq_server-3.6.13\sbin
 3. 启用rabbitmq服务 
    - rabbitmq-service install
    - rabbitmq-service enable

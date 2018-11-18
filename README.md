@@ -1,4 +1,5 @@
-# MassTransit-RabbitMQ  .NET使用MassTransit消息总线集成RabbitMQ实现发布订阅
+# MassTransit-RabbitMQ  
+## .NET使用MassTransit消息总线集成RabbitMQ实现发布订阅
 
 1. RabbitMQClient  
       > 客户端,消费服务端 PrintMessage,RoadGateMessage消息

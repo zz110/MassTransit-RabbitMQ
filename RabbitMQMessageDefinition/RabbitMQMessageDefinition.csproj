@@ -42,6 +42,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BaseMessage.cs" />
+    <Compile Include="ClientMessage\Print10Message.cs" />
     <Compile Include="ClientMessage\RoadGateMessage.cs" />
     <Compile Include="RabbitMQMessageEventDefinition.cs" />
     <Compile Include="RabbitMQMessageTransferUtil.cs" />

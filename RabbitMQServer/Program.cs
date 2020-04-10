@@ -2,6 +2,7 @@
 using Microsoft.Practices.Unity;
 using RabbitMQManager;
 using RabbitMQMessageDefinition;
+using RabbitMQServer.Consumer;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -58,14 +59,21 @@ namespace RabbitMQServer
                                         //    configure.Consumer<TruckScaleDataProvideMessageConsumer>();
                                         //});
 
-                                        foreach (var item in unityContainer)
-                                        {
-                                            cfg.ReceiveEndpoint(host, item.Key, configure =>
-                                            {
-                                                configure.LoadFrom(item.Value);
-                                            });
-                                        }
+                                        //foreach (var item in unityContainer)
+                                        //{
+                                        //    cfg.ReceiveEndpoint(host, item.Key, configure =>
+                                        //    {
+                                        //        configure.LoadFrom(item.Value);
+                                        //    });
+                                        //}
 
+                                        cfg.ReceiveEndpoint("server", config =>
+                                        {
+                                            config.Consumer<CameraMessageConsumer>();
+                                            config.Consumer<PrintFaultMessageConsumer>();
+                                            config.Consumer<TruckScaleMessageConsumer>();
+                                        });
+                                     
                                     });
 
             _busControl.Start();

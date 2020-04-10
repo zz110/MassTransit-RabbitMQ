@@ -3,12 +3,17 @@ using RabbitMQManager;
 using RabbitMQMessageDefinition;
 using System;
 using System.Windows.Forms;
+using System.Threading.Tasks;
+using System.Threading;
 
 namespace RabbitMQClient
 {
     public partial class frmMqClient : Form
     {
         RabbitMQMessageTransferUtil transferUtil = IocManager.Resolve<RabbitMQMessageTransferUtil>();
+
+
+        private IBusControl busControl = IocManager.Resolve<IBusControl>();
 
         public frmMqClient()
         {
@@ -66,16 +71,49 @@ namespace RabbitMQClient
             });
         }
 
-        private void frmMqClient_FormClosed(object sender, FormClosedEventArgs e)
-        {
-            try
-            {
-                IocManager.Resolve<IBusControl>().Stop();
-            }
-            catch (Exception ex)
-            {
+       
 
-            }
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+            Task.Factory.StartNew(() =>
+            {
+                for (int i = 0; i < 20; i++) {
+
+                    showLogs($"发送消息{i}");
+                    busControl.Publish(new PrintMessage()
+                    {
+                        carno = $"发送消息{i}:{DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss")}",
+                        content = "发送消息",
+                        clientId = Guid.NewGuid().ToString()
+                    }, pc => pc.TimeToLive = TimeSpan.FromSeconds(5));
+
+
+                    showLogs($"发送消息10-{i}");
+                    busControl.Publish(new Print10Message()
+                    {
+                        carno = $"发送消息10-{i}:{DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss")}",
+                        content = "发送消息10",
+                        clientId = Guid.NewGuid().ToString()
+                    }, pc => pc.TimeToLive = TimeSpan.FromSeconds(10));
+
+                    Thread.Sleep(1000);
+                }
+
+            });
+         
+
+       
+        }
+
+        private void frmMqClient_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            IocManager.Resolve<IBusControl>().Stop();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

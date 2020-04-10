@@ -32,8 +32,10 @@ namespace RabbitMQManager
                 {
                     h.Username(conifg.Username);
                     h.Password(conifg.Password);
+
                     h.PublisherConfirmation = true;
                 });
+                
                 cfg.PrefetchCount = 1000;
                 registrationAction?.Invoke(cfg, host);
             });

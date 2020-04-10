@@ -2,6 +2,7 @@
 using RabbitMQManager;
 using RabbitMQManager.Log;
 using RabbitMQMessageDefinition;
+using System;
 using System.Threading.Tasks;
 
 namespace RabbitMQClient.Consumer
@@ -9,6 +10,7 @@ namespace RabbitMQClient.Consumer
     public class PrintMessageConsumer : IConsumer<PrintMessage>
     {
         private Logger logger = new Logger();
+
 
         public async Task Consume(ConsumeContext<PrintMessage> context)
         {
@@ -19,10 +21,14 @@ namespace RabbitMQClient.Consumer
         {
             await Task.Factory.StartNew(() =>
             {
+
+
                 string result = Newtonsoft.Json.JsonConvert.SerializeObject(context.Message);
                 IocManager.Resolve<RabbitMQMessageTransferUtil>().broadcast(result);
                 logger.Log(typeof(PrintMessageConsumer), "Handle", "PrintMessage",
                     result, "");
+
+
             });
         }
     }

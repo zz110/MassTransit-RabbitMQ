@@ -39,6 +39,8 @@
             this.btnDb = new System.Windows.Forms.Button();
             this.btnCamera = new System.Windows.Forms.Button();
             this.richTxt = new System.Windows.Forms.RichTextBox();
+            this.button1 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // txtCarno
@@ -135,11 +137,33 @@
             this.richTxt.TabIndex = 20;
             this.richTxt.Text = "";
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(393, 157);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 21;
+            this.button1.Text = "button1";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(590, 147);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(75, 23);
+            this.button2.TabIndex = 22;
+            this.button2.Text = "button2";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
             // frmMqClient
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 627);
+            this.Controls.Add(this.button2);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.richTxt);
             this.Controls.Add(this.txtCarno);
             this.Controls.Add(this.txtWeight);
@@ -153,7 +177,7 @@
             this.Controls.Add(this.btnCamera);
             this.Name = "frmMqClient";
             this.Text = "客户端消息测试";
-            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.frmMqClient_FormClosed);
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmMqClient_FormClosing);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -172,6 +196,8 @@
         private System.Windows.Forms.Button btnDb;
         private System.Windows.Forms.Button btnCamera;
         private System.Windows.Forms.RichTextBox richTxt;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button button2;
     }
 }
 

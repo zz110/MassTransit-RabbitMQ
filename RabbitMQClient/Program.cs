@@ -31,7 +31,7 @@ namespace RabbitMQClient
 
             var container = new UnityContainer();
 
-
+            //死信对列绑定配置
             var bus = MassTransitRabbitMQ.instance.CreateBus(
                                     (cfg, host) =>
                                     {
@@ -49,12 +49,14 @@ namespace RabbitMQClient
                                         });
                                     });
             bus.Start();
+            bus.Stop();
 
             //消息总线
+            //建议每个死信队列单独配置一个Endpoint
             IBusControl _busControl = MassTransitRabbitMQ.instance.CreateBus(
                                     (cfg, host) =>
                                     {
-
+                                        //配置死信队列
                                         cfg.ReceiveEndpoint(host, "myQueue-Dead-Letter", x =>
                                         {
                                             x.BindMessageExchanges = false;                                     
@@ -62,6 +64,7 @@ namespace RabbitMQClient
      
                                         });
 
+                                        //配置死信队列
                                         cfg.ReceiveEndpoint(host, "myQueue10-Dead-Letter", x =>
                                         {
                                             x.BindMessageExchanges = false;
@@ -71,10 +74,6 @@ namespace RabbitMQClient
 
                                     });
             _busControl.Start();
-
-            bus.Stop();
-
-           
 
             RabbitMQMessageTransferUtil transferUtil = new RabbitMQMessageTransferUtil();
             container.RegisterInstance(transferUtil, new ContainerControlledLifetimeManager());

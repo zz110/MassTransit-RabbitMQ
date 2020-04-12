@@ -139,11 +139,11 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(393, 157);
+            this.button1.Location = new System.Drawing.Point(388, 200);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.Size = new System.Drawing.Size(136, 23);
             this.button1.TabIndex = 21;
-            this.button1.Text = "button1";
+            this.button1.Text = "测试死信队列";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 

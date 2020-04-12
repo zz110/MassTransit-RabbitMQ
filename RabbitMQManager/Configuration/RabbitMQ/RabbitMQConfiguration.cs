@@ -21,7 +21,7 @@ namespace RabbitMQManager
             }
         }
 
-        [ConfigurationProperty("Username",  DefaultValue = "JiYun")]
+        [ConfigurationProperty("Username",  DefaultValue = "")]
         public string Username
         {
             get { return (string)this["Username"]; }
@@ -29,7 +29,7 @@ namespace RabbitMQManager
         }
 
 
-        [ConfigurationProperty("Password",  DefaultValue = "P@ssword")]
+        [ConfigurationProperty("Password",  DefaultValue = "")]
         public string Password
         {
             get { return (string)this["Password"]; }
